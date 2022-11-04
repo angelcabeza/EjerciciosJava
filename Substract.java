@@ -8,18 +8,14 @@ package com.curso.ejerciciosjava;
  *
  * @author acabezam
  */
+public class Substract extends Operator{
 
-
-public class Calculadora {
-    private Operator operator;
-    private double operator1;
-    private double operator2;
-        
-    public Calculadora(Operator operator){
-        this.operator = operator;
+    public Substract(int operatorA, int operatorB) {
+        super(operatorA, operatorB);
     }
     
+    @Override
     public double operate(){
-        return this.operator.operate();
+        return this.operatorA - this.operatorB;
     }
 }

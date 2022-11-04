@@ -8,18 +8,14 @@ package com.curso.ejerciciosjava;
  *
  * @author acabezam
  */
-
-
-public class Calculadora {
-    private Operator operator;
-    private double operator1;
-    private double operator2;
-        
-    public Calculadora(Operator operator){
-        this.operator = operator;
+public class Power extends Operator{
+    public Power(int a, int b){
+        this.operatorA = a;
+        this.operatorB = b;
     }
     
+    @Override
     public double operate(){
-        return this.operator.operate();
+        return Math.pow(operatorA, operatorB);
     }
 }
